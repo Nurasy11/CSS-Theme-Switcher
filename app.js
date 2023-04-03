@@ -39,5 +39,7 @@ solarButton.onclick = () => {
         `
         body.classList.add('solar');
         solarButton.innerText = 'normalize';
+
+        localStorage.setItem('isSolar', true);
     }
 };
