@@ -18,20 +18,6 @@ a {
     text-decoration: none;
 }
 
-.navbar {
-    height: 70px;
-    width: 100%;
-    background: black;
-    color: white;
-}
-
-.navbar-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 100%;
-}
-
 header {
     padding: 1em;
     background: red;
@@ -41,15 +27,43 @@ header {
     clip-path: polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
 }
 
+main {
+    min-height: 1000px;
+    padding: 2rem;
+}
+
+img {
+    margin: 2em 0 0;
+    width: 180px;
+    height: 180px;
+}
+
+.navbar {
+    height: 70px;
+    width: 100%;
+    background: var(--bg-nav);
+    color: var(--text);
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+
+
 .dropdown {
     position: absolute;
     width: 500px;
     opacity: 0;
     z-index: 2;
-    background: blue;
-    border-top: 2px solid white;
+    background: var(--bg-dropdown);
+    border-top: 2px solid var(--border-color);
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
+
     display: flex;
     height: 3rem;
     margin-top: 2rem;
@@ -78,7 +92,7 @@ header {
 
 .dropdown-item a::before {
     content: ' ';
-    border: 2px solid white;
+    border: 2px solid var(--border-color);
     border-radius: 50%;
     width: 2rem;
     height: 2rem;
@@ -128,6 +142,18 @@ header {
     --gray4: #3ea565;
     --gray5: #005368;
     --gray6: #003d4c;
+}
+
+#dark::before {
+    background: #2a2e35;
+}
+
+#light::before {
+    background: #ffffff;
+}
+
+#solar::before {
+    background: var(--bg-solar);
 }
 
 /* Logo Animation*/
